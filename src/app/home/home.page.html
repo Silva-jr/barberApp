@@ -1,20 +1,111 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="tertiary">
+    <div class="header">
+      <div class="profile-text">
+        <h6>Bem vindo,</h6>
+        <h4>José da Silva</h4>
+      </div>
+      <div class="profile-img">
+        <img [routerLink]="['../../perfil']" src="../../assets/img/silva.jpg" alt="">
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="primary">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+  <div class="container">
+    <h2>Barbeiros</h2>
+    <div class="profile-card" [routerLink]="['../../home/agendamento']">
+      <div class="profile-card-img">
+        <img src="../../assets/img/bar.jpg" alt="">
+      </div>
+      <div class="profile-card-detail" >
+        <h4>Cleiton Spuza</h4>
+        <div class="date-time">
+          <img src="../../assets/icon/calendário.png" alt="">
+          <p>Segunda à Sexta</p>
+        </div>
+        <div class="date-time">
+          <img src="../../assets/icon/horário.png" alt="">
+          <p>8h às 18h</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="profile-card" [routerLink]="['../../home/agendamento']">
+      <div class="profile-card-img">
+        <img src="../../assets/img/barber (3).jpg" alt="">
+      </div>
+      <div class="profile-card-detail">
+        <h4>Tom Guinamau</h4>
+        <div class="date-time">
+          <img src="../../assets/icon/calendário.png" alt="">
+          <p>Segunda à Sexta</p>
+        </div>
+        <div class="date-time">
+          <img src="../../assets/icon/horário.png" alt="">
+          <p>9h às 16h</p>
+        </div>
+
+      </div>
+    </div>
+
+     <div class="profile-card" [routerLink]="['../../home/agendamento']">
+      <div class="profile-card-img">
+          <img src="../../assets/img/lady.jpg" alt="">
+      </div>
+      <div class="profile-card-detail">
+        <h4>Sueli Filipe</h4>
+        <div class="date-time">
+          <img src="../../assets/icon/calendário.png" alt="">
+          <p>Segunda à Sexta</p>
+        </div>
+        <div class="date-time">
+          <img src="../../assets/icon/horário.png" alt="">
+          <p>8h às 18h</p>
+        </div>
+
+      </div>
+    </div>
+
+     <div class="profile-card" [routerLink]="['../../home/agendamento']">
+      <div class="profile-card-img">
+          <img src="../../assets/img/baber-man.jpg" alt="">
+      </div>
+      <div class="profile-card-detail">
+        <h4>Cláudio Silva</h4>
+        <div class="date-time">
+          <img src="../../assets/icon/calendário.png" alt="">
+          <p>Segunda à Sexta</p>
+        </div>
+        <div class="date-time">
+          <img src="../../assets/icon/horário.png" alt="">
+          <p>8h às 12h</p>
+        </div>
+
+      </div>
+    </div>
+
+     <div class="profile-card" [routerLink]="['../../home/agendamento']">
+      <div class="profile-card-img">
+          <img src="../../assets/img/barbeiro.png" alt="">
+      </div>
+      <div class="profile-card-detail">
+        <h4>Eugénio Miguel</h4>
+        <div class="date-time">
+          <img src="../../assets/icon/calendário.png" alt="">
+          <p>Segunda à Sexta</p>
+        </div>
+        <div class="date-time">
+          <img src="../../assets/icon/horário.png" alt="">
+          <p>12h às 19h</p>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </ion-content>

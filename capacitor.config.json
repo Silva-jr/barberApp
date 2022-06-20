@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "barberApp",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "Keyboard": {
+      "resize": "body",
+      "style": "default",
+      "resizeOnFullScreen": true
+    }
+  }
+}

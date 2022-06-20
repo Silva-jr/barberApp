@@ -1,0 +1,93 @@
+ion-content {
+  font-family: "Roboto Slab", serif;
+  input {
+    border: none;
+  }
+  .container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 auto;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      p {
+        font-weight: 600;
+      }
+    }
+    .main {
+      .profile-img {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        img {
+          width: 170px;
+          border-radius: 6rem;
+        }
+        .chance-profile {
+          position: absolute;
+          margin-left: 8rem;
+          bottom: 0rem;
+          width: 55px;
+        }
+      }
+
+      .form {
+        padding: 2rem 0;
+        .forms-control {
+          padding: 0.4rem;
+          width: 100%;
+          margin: 0 auto;
+          position: relative;
+          transition: var(--transition-default);
+          input {
+            display: inline !important;
+            padding: 1rem 2rem;
+            outline: none;
+            -webkit-appearance: none;
+            background: #232129;
+            border-radius: 10px;
+            //border: 0.06rem solid #ff9000;
+            width: 100%;
+            color: #fff;
+          }
+          input:disabled{
+            opacity: 0.6;
+          }
+          span {
+            position: absolute;
+            margin-left: 0.5rem;
+            margin-top: 1.1rem;
+          }
+
+          button {
+            width: 100%;
+            height: 50px;
+            left: 40px;
+            top: 509px;
+            background: #ff9000;
+            border-radius: 10px;
+            color: #312e38;
+            font-family: "Roboto Slab", serif;
+            font-weight: 600;
+            margin-top: 3rem;
+            cursor: pointer;
+          }
+          button:disabled {
+            opacity: 0.6;
+          }
+        }
+        .forms-row {
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}

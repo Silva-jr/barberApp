@@ -1,0 +1,51 @@
+<ion-content color="primary" [fullscreen]="true">
+    <div class="container">
+        <header class="header">
+            <img [routerLink]="['../home/home']" src="../../../assets/icon/voltar.png" alt="">
+            <p>Meu Perfil</p>
+            <div class="logout-out" [routerLink]="[ '../pages/login']">
+                <i class="fa fa-power-off" aria-hidden="true"></i>
+            </div>
+
+        </header>
+
+        <main class="main">
+            <div class="profile-img">
+                <img src="../../assets/img/silva.jpg">
+                <img (click)="takePicture()" class="chance-profile" src="../../assets/img/trocar.png" alt="">
+                <!-- <p>{{photo}}</p> -->
+            </div>
+
+
+            <div class="form">
+                <form>
+                    <div class="forms-control">
+                        <span><img src="../../../assets/icon/user.png" alt=""></span>
+                        <input  type="text" placeholder="Nome" value="Tom Guinamau">
+                    </div>
+                    <div class="forms-control">
+                        <span><img src="../../../assets/icon/email.png" alt=""></span>
+                        <input type="email" placeholder="E-mail" value="tomguinamau@gmail.com">
+                    </div>
+                    <div class="forms-row">
+                        <div class="forms-control">
+                            <span><img src="../../../assets/icon/senha.png" alt=""></span>
+                            <input  type="password" placeholder="Senha atual">
+                        </div>
+                        <div class="forms-control">
+                            <span><img src="../../../assets/icon/senha.png" alt=""></span>
+                            <input  type="password" placeholder="Nova senha">
+                        </div>
+                        <div class="forms-control">
+                            <span><img src="../../../assets/icon/senha.png" alt=""></span>
+                            <input  type="password" placeholder="Confirmar senha">
+                        </div>
+                        <div  class="forms-control">
+                            <button disabled >Confirmar mudanças</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</ion-content>

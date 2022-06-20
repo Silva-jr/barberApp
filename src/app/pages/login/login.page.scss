@@ -1,0 +1,133 @@
+ion-content {
+  font-family: "Roboto Slab", serif;
+  .container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    margin: 0 auto;
+    padding: 3rem 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    p {
+      color: #999591;
+      font-weight: 400;
+    }
+    .logo-content {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      .logo {
+        //width: 8.984rem;
+        padding: 1rem;
+        margin: 0 auto;
+      }
+    }
+
+    .bar {
+      width: 12.5rem;
+      margin: 0 auto;
+    }
+
+    .form {
+      .forms-control {
+        padding: 0.4rem;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        transition: var(--transition-default);
+        h2 {
+          font-style: normal;
+          font-weight: 500;
+        }
+        input {
+          display: inline !important;
+          padding: 1rem 2rem;
+          outline: none;
+          -webkit-appearance: none;
+          background: #232129;
+          border-radius: 10px;
+          border: 0.06rem solid #ff9000;
+          width: 100%;
+        }
+        span {
+          position: absolute;
+          margin-left: 0.5rem;
+          margin-top: 1.1rem;
+        }
+        button {
+          width: 100%;
+          height: 50px;
+          left: 40px;
+          top: 509px;
+          background: #ff9000;
+          border-radius: 10px;
+          color: #000;
+          font-family: "Roboto Slab", serif;
+          font-weight: 500;
+          margin-top: 1rem;
+        }
+      }
+    }
+    .footer {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      position: fixed;
+      z-index: -9999;
+      bottom: 0%;
+      //padding: 1rem 0;
+      .sign-up {
+        z-index: -9999;
+        padding: 1rem 0;
+        color: #fff;
+        //border-top: 1px solid #232129;
+        cursor: pointer;
+        span:last-child {
+          color: #ff9000;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  ion-content {
+    .container {
+      height: 90%;
+      padding: 1rem 0;
+      .logo-content {
+        width: 35%;
+        .logo {
+          //width: 8.984rem;
+          padding: 0.2rem;
+          margin: 0 auto;
+        }
+      }
+      .form {
+        .forms-control {
+          padding: 0.2rem;
+        }
+      }
+      .footer,
+      #footer {
+        height: 20px;
+        padding-top: 0rem;
+        .sign-up {
+          color: #fff;
+          padding: 1rem 0;
+          cursor: pointer;
+          span:last-child {
+            color: #ff9000;
+            font-weight: 800;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

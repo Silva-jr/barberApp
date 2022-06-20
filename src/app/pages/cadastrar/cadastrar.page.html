@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true" class="ion-no-padding" color="primary">
+    <div class="container" id="container">
+        <div class="header">
+            <P>Awesome</P>
+            <img class="bar" src="../../assets/img/Rectangle.png" alt="">
+            <div class="logo-content">
+                <img class="elipse" src="../../assets/icon/Ellipse.png" alt="">
+                <img class="logo" src="../../assets/img/GoBarber.png" alt="">
+                <img class="elipse2" src="../../assets/icon/Ellipse.png" alt="">
+            </div>
+            <img class="bar" src="../../assets/img/Rectangle.png" alt="">
+            <p>Haircuts & Shaves</p>
+        </div>
+
+
+        <div class="form">
+            <h2>Crie sua conta</h2>
+            <form>
+                <div class="forms-control">
+                    <span><img src="../../../assets/icon/user.png" alt=""></span>
+                    <input type="text" placeholder="Nome">
+                </div>
+                <div class="forms-control">
+                    <span><img src="../../../assets/icon/email.png" alt=""></span>
+                    <input type="email" placeholder="E-mail">
+                </div>
+                <div class="forms-control">
+                    <span><img src="../../../assets/icon/senha.png" alt=""></span>
+                    <input type="password" placeholder="Senha">
+                </div>
+                <div class="forms-control">
+                    <button>Cadastrar</button>
+                </div>
+            </form>
+            <div class="back-login ">
+                <span>Já tens uma conta?</span>
+                <span [routerLink]="['../login']"> Login</span>
+            </div>
+        </div>
+    </div>
+
+</ion-content>
