@@ -1,7 +1,7 @@
 # barberApp<br />
 <p align="center">
   <a href="https://umpontoseis.com/">
-    <img src="https://i.imgur.com/SxSYlTq.png" alt="Logo" width="350" height="200">
+    <!--img src="https://i.imgur.com/SxSYlTq.png" alt="Logo" width="350" height="200" -->
   </a>
 
   <h3 align="center">GoBarber<a href="https://portfoliojosesilva.netlify.app/">José da Silva</a></h3>
