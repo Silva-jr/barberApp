@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
     <ion-toolbar color="tertiary">
         <div class="header">
-            <span [routerLink]="['../../home/home']"  class="arrow">
+            <span [routerLink]="['../../home/home']" class="arrow">
                 <img src="../../../assets/icon/voltar.png" alt="">
             </span>
             <span class="profile-text">
@@ -15,13 +15,35 @@
 </ion-header>
 <ion-content>
     <div class="container">
+
+        <div class="barber-scroll">
+            <div class="barbers active">
+                <img src="../../../assets/img/barbeiro.png" alt="">
+                <span>Francisco André</span>
+            </div>
+            <div class="barbers">
+                <img src="../../../assets/img/barbeiro.png" alt="">
+                <span>Francisco André</span>
+            </div>
+            <div class="barbers">
+                <img src="../../../assets/img/barbeiro.png" alt="">
+                <span>Francisco André</span>
+            </div>
+             <div class="barbers">
+                <img src="../../../assets/img/barbeiro.png" alt="">
+                <span>Francisco André</span>
+            </div>
+            
+
+        </div>
+        
         <h3>Escolha a data</h3>
 
         <!--   <div>
             <ion-calendar [(ngModel)]="date" (onChange)="onChange($event)">
             </ion-calendar>
         </div> -->
-        <ion-datetime  size="cover" color="light" [presentation]="selectedMode">
+        <ion-datetime size="cover" color="light" [presentation]="selectedMode">
         </ion-datetime>
 
         <div class="horario">
@@ -46,9 +68,9 @@
             <p>Noite</p>
             <div class="time">
                 <span>19:00</span>
-                <span>19:30</span>                
+                <span>19:30</span>
             </div>
         </div>
-        <button>Agendar</button>
+        <button [routerLink]="['../agendamento-concluido']">Agendar</button>
     </div>
 </ion-content>

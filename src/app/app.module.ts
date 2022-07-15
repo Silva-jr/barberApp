@@ -12,7 +12,10 @@ import { PerfilPage } from './perfil/perfil.page';
 @NgModule({
   declarations: [AppComponent, PerfilPage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [Camera,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    Camera,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

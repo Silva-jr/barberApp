@@ -1,34 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Camera, CameraOptions } from '@awesome-cordova-plugins/camera/ngx';
+//import { Camera, CameraOptions } from '@awesome-cordova-plugins/camera/ngx';
+import { Camera, CameraResultType } from '@capacitor/camera';
 
 @Component({
   templateUrl: './perfil.page.html',
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
-  options: CameraOptions = {
+  /*   options: CameraOptions = {
     quality: 100,
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.PNG,
     mediaType: this.camera.MediaType.PICTURE,
     allowEdit: false,
   };
+ */
+  photo: string;
 
-  photo;
-
-  constructor(private camera: Camera, private sanitazer: DomSanitizer) {}
+  constructor(private sanitazer: DomSanitizer) {}
 
   ngOnInit(): void {}
 
-  takePicture() {
-    this.camera
+  async takePicture() {
+    /*  this.camera
       .getPicture({
-        quality: 100,
+        quality: 30,
         sourceType: this.camera.PictureSourceType.CAMERA,
-        destinationType: this.camera.DestinationType.FILE_URI,
+        destinationType: this.camera.DestinationType.DATA_URL,
         mediaType: this.camera.MediaType.PICTURE,
-        
+        encodingType: this.camera.EncodingType.JPEG,
       })
       .then((res) => {
         let base64 = 'data:image/jpeg;base64,' + res;
@@ -38,5 +39,12 @@ export class PerfilPage implements OnInit {
       .catch((e) => {
         console.log(e);
       });
+   */
+  const image = await Camera.getPhoto({
+    quality: 100,
+    allowEditing: false,
+    resultType: CameraResultType.DataUrl
+  });
+  this.photo = image.dataUrl;
   }
 }

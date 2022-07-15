@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SplashRoutingModule } from './splash-routing.module';
-import { SplashComponent } from './splash.component';
+
+import { SplashComponent } from './splash/splash.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { SharedRoutingModule } from './shared-routing.module';
 
 
 @NgModule({
@@ -13,9 +14,9 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    SplashRoutingModule,
+    SharedRoutingModule,
     IonicModule,
     FormsModule,
   ]
 })
-export class SplashModule { }
+export class SharedModule { }

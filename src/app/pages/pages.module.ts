@@ -6,16 +6,16 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPage } from './login/login.page';
 import { PagesRoute } from './pages.routing';
 import { CadastrarPage } from './cadastrar/cadastrar.page';
+import { CadastroConcluidoPage } from './cadastro-concluido/cadastro-concluido.page';
 
 @NgModule({
-  declarations: [LoginPage, CadastrarPage],
+  declarations: [LoginPage, CadastrarPage, CadastroConcluidoPage],
   imports: [
     CommonModule,
     RouterModule.forChild(PagesRoute),
     FormsModule,
     ReactiveFormsModule,
-    IonicModule
-    
+    IonicModule,
   ],
   exports: [],
   providers: [],

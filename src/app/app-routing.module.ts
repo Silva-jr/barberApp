@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PerfilPage } from './perfil/perfil.page';
-import { CadastroConcluidoPage } from './shared/cadastro-concluido/cadastro-concluido.page';
+import { CadastroConcluidoPage } from './pages/cadastro-concluido/cadastro-concluido.page';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
-  },
   {
     path: '',
     redirectTo: 'pages/login',
     pathMatch: 'full',
   },
   {
-    path: 'splash',
+    path: 'home',
     loadChildren: () =>
-      import('./shared/splash/splash.module').then((m) => m.SplashModule),
+      import('./home/home.module').then((m) => m.HomePageModule),
+  },
+  {
+    path: 'shared',
+    loadChildren: () =>
+      import('./shared/shared.module').then((m) => m.SharedModule),
   },
   {
     path: 'pages',
@@ -26,12 +26,12 @@ const routes: Routes = [
   },
   {
     path: 'cadastro-concluido',
-    component: CadastroConcluidoPage
+    component: CadastroConcluidoPage,
   },
   {
     path: 'perfil',
-    component: PerfilPage
-  }
+    component: PerfilPage,
+  },
 ];
 
 @NgModule({

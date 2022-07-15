@@ -1,0 +1,42 @@
+ion-content {
+  background-color: #312e38;
+}
+.container {
+  text-align: center;    
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  p {
+    color: #999591;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .logo-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 30px;
+    .logo {
+      //width: 8.984rem;
+      margin: 0 auto;
+    }
+  }
+
+  button {
+    width: 100px;
+    height: 50px;        
+    margin: 0 auto;
+    background: #ff9000;
+    border-radius: 10px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

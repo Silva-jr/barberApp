@@ -1,5 +1,5 @@
 ion-content {
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab", serif;  
   .container {
     width: 100%;
     height: 100%;
@@ -33,11 +33,12 @@ ion-content {
     }
 
     .form {
+      padding: 0 1rem;
       .forms-control {
         padding: 0.4rem;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
-        position: relative;
+        position: relative;        
         transition: var(--transition-default);
         h2 {
           font-style: normal;
@@ -49,14 +50,16 @@ ion-content {
           outline: none;
           -webkit-appearance: none;
           background: #232129;
-          border-radius: 10px;
-          border: 0.06rem solid #ff9000;
+          border-radius: 10px;          
           width: 100%;
+          &:focus{
+            border: 0.06rem solid #ff9000;
+          }
         }
         span {
           position: absolute;
           margin-left: 0.5rem;
-          margin-top: 1.1rem;
+          margin-top: 1rem;
         }
         button {
           width: 100%;
@@ -69,6 +72,7 @@ ion-content {
           font-family: "Roboto Slab", serif;
           font-weight: 500;
           margin-top: 1rem;
+          font-size: 14px;
         }
       }
     }

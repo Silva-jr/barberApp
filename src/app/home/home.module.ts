@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRouting } from './home-routing.module';
 import { AgendamentoComponent } from './agendamento/agendamento.component';
 import { RouterModule } from '@angular/router';
+import { AgendamentoConcluidoComponent } from './agendamento-concluido/agendamento-concluido.component';
 
 
 
@@ -19,6 +20,6 @@ import { RouterModule } from '@angular/router';
     
     
   ],
-  declarations: [HomePage, AgendamentoComponent]
+  declarations: [HomePage, AgendamentoComponent, AgendamentoConcluidoComponent]
 })
 export class HomePageModule {}

@@ -13,7 +13,10 @@ ion-content {
   p {
     color: #999591;
     font-family: "Roboto Slab", serif;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0 2rem;
+    line-height: 24px;
   }
   .logo-content {
     width: 50%;
@@ -21,6 +24,7 @@ ion-content {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    font-size: 30px;
     .logo {
       //width: 8.984rem;
       margin: 0 auto;
@@ -33,5 +37,9 @@ ion-content {
     margin: 0 auto;
     background: #ff9000;
     border-radius: 10px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    font-size: 14px;
   }
 }

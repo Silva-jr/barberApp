@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SplashComponent } from './splash.component';
+import { SplashComponent } from './splash/splash.component';
 
 const routes: Routes = [{ path: '', component: SplashComponent }];
 
@@ -8,4 +8,4 @@ const routes: Routes = [{ path: '', component: SplashComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SplashRoutingModule { }
+export class SharedRoutingModule { }
