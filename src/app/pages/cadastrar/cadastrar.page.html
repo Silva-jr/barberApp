@@ -32,11 +32,13 @@
                     <button [routerLink]="['../cadastro-concluido']">Cadastrar</button>
                 </div>
             </form>
-            <div class="back-login ">
-                <span>Já tens uma conta?</span>
-                <span [routerLink]="['../login']"> Login</span>
-            </div>
         </div>
+        <footer>
+            <div class="back-login ">
+                <img [routerLink]="['../login']" src="../../../assets/icon/back.png" alt="">
+                <span>voltar para o login</span>
+            </div>
+        </footer>
     </div>
 
 </ion-content>

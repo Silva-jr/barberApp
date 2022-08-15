@@ -34,6 +34,7 @@ ion-content {
 
     .form {
       padding: 0 1rem;
+      margin-top: 2.6rem;
       .forms-control {
         padding: 0.4rem;
         width: 100%;
@@ -83,15 +84,20 @@ ion-content {
       position: fixed;
       z-index: -9999;
       bottom: 0%;
-      //padding: 1rem 0;
+       border-top: 0.1px solid #232129;
       .sign-up {
         z-index: -9999;
         padding: 1rem 0;
         color: #fff;
-        //border-top: 1px solid #232129;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        gap: .5rem;
         cursor: pointer;
-        span:last-child {
+        span {
           color: #ff9000;
+          font-size: 14px;
           font-weight: 400;
         }
       }
@@ -127,8 +133,7 @@ ion-content {
           cursor: pointer;
           span:last-child {
             color: #ff9000;
-            font-weight: 800;
-            text-decoration: underline;
+            font-weight: 400;
           }
         }
       }

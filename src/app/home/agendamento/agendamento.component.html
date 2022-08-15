@@ -29,46 +29,45 @@
                 <img src="../../../assets/img/barbeiro.png" alt="">
                 <span>Francisco André</span>
             </div>
-             <div class="barbers">
+            <div class="barbers">
                 <img src="../../../assets/img/barbeiro.png" alt="">
                 <span>Francisco André</span>
             </div>
-            
+
 
         </div>
-        
+
         <h3>Escolha a data</h3>
 
-        <!--   <div>
-            <ion-calendar [(ngModel)]="date" (onChange)="onChange($event)">
-            </ion-calendar>
-        </div> -->
-        <ion-datetime size="cover" color="light" [presentation]="selectedMode">
-        </ion-datetime>
+        <div class="container-calendar">
+            <ion-datetime [(ngModel)]="myDate" (ionChange)="onChange(myDate)" size="cover" locale="pt-BR" color="light" [presentation]="selectedMode">
+            </ion-datetime>
+        </div>
+
 
         <div class="horario">
             <h3>Escolha o horário</h3>
 
             <p>Manhã</p>
             <div class="time">
-                <span>09:00</span>
-                <span>10:30</span>
-                <span>12:00</span>
+                <span class="time-hour">09:00</span>
+                <span class="time-hour">10:30</span>
+                <span class="time-hour">12:00</span>
             </div>
 
             <p>Tarde</p>
             <div class="time">
-                <span class="clock-ative">12:00</span>
-                <span>13:30</span>
-                <span>14:00</span>
-                <span>15:00</span>
-                <span>17:30</span>
+                <span >12:00</span>
+                <span id="hour" data-hours="13:30" class="time-hour">13:30</span>
+                <span id="hour" data-hours="14:00" class="time-hour">14:00</span>
+                <span class="time-hour">15:00</span>
+                <span class="time-hour">17:30</span>
             </div>
 
             <p>Noite</p>
             <div class="time">
-                <span>19:00</span>
-                <span>19:30</span>
+                <span class="time-hour">19:00</span>
+                <span class="time-hour">19:30</span>
             </div>
         </div>
         <button [routerLink]="['../agendamento-concluido']">Agendar</button>
