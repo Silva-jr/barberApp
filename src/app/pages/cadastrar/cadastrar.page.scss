@@ -83,6 +83,9 @@ ion-content {
           font-style: normal;
           font-weight: 500;
           line-height: 18px;
+          &:disabled {
+            background: #fcb963;
+          }
         }
       }
     }
@@ -101,12 +104,12 @@ ion-content {
         align-items: center;
         justify-content: center;
         text-align: center;
-        gap: .5rem;
-        span{
+        gap: 0.5rem;
+        span {
           color: #ffffff;
           font-weight: 800;
           font-size: 14px;
-          line-height: 18px;          
+          line-height: 18px;
         }
       }
     }

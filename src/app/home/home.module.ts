@@ -8,6 +8,7 @@ import { HomePageRouting } from './home-routing.module';
 import { AgendamentoComponent } from './agendamento/agendamento.component';
 import { RouterModule } from '@angular/router';
 import { AgendamentoConcluidoComponent } from './agendamento-concluido/agendamento-concluido.component';
+import { ComponentModule } from '../shared/components.module';
 
 
 
@@ -17,6 +18,7 @@ import { AgendamentoConcluidoComponent } from './agendamento-concluido/agendamen
     RouterModule.forChild(HomePageRouting),
     FormsModule,
     IonicModule,    
+    ComponentModule
     
     
   ],

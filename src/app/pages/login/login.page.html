@@ -15,18 +15,22 @@
 
         <div class="form">
             <h2>Login</h2>
-            <form>
+            <form [formGroup]="register" (ngSubmit)="login()">
                 <div class="forms-control">
                     <span><img src="../../../assets/icon/email.png" alt=""></span>
-                    <input type="email" placeholder="E-mail">
+                    <input type="email" placeholder="E-mail" formControlName="email">
                 </div>
                 <div class="forms-control">
                     <span><img src="../../../assets/icon/senha.png" alt=""></span>
-                    <input type="password" placeholder="Senha">
+                    <input type="password" placeholder="Senha" formControlName="password">
                 </div>
                 <div class="forms-control">
-                    <button [routerLink]="['../../home/home']"><i class="fas fa-sign-in" aria-hidden="true"></i>
+                    <button *ngIf="!loading" [disabled]="register.invalid" type="submit"><i class="fas fa-sign-in"
+                            aria-hidden="true"></i>
                         Entrar</button>
+                    <button *ngIf="loading" class="continuar" [disabled]="true" type="submit">
+                        <ion-spinner></ion-spinner>
+                    </button>
                 </div>
             </form>
 

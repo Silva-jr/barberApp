@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 //import { Camera, CameraOptions } from '@awesome-cordova-plugins/camera/ngx';
 import { Camera, CameraResultType } from '@capacitor/camera';
+import { AuthService } from '../configs/services/auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../configs/services/user.service';
 
 @Component({
   templateUrl: './perfil.page.html',
@@ -17,10 +20,24 @@ export class PerfilPage implements OnInit {
   };
  */
   photo: string;
+  register: FormGroup;
+  dataUser: any;
 
-  constructor(private sanitazer: DomSanitizer) {}
+  constructor(
+    private sanitazer: DomSanitizer,
+    private auth: AuthService,
+    private userService: UserService,
+    private formBuilder: FormBuilder
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getUserById();
+    this.register = this.formBuilder.group({
+      username: [null, Validators.required],
+      email: [null, Validators.email],
+      password: [null, Validators.required]
+    });
+  }
 
   async takePicture() {
     /*  this.camera
@@ -40,11 +57,29 @@ export class PerfilPage implements OnInit {
         console.log(e);
       });
    */
-  const image = await Camera.getPhoto({
-    quality: 100,
-    allowEditing: false,
-    resultType: CameraResultType.DataUrl
-  });
-  this.photo = image.dataUrl;
+    const image = await Camera.getPhoto({
+      quality: 100,
+      allowEditing: false,
+      resultType: CameraResultType.DataUrl,
+    });
+    this.photo = image.dataUrl;
+  }
+
+  getUserById() {
+    this.userService
+      .getUserLogged()
+      .pipe()
+      .subscribe((data) => {
+        this.dataUser = data;
+        console.log(data);
+        this.register.patchValue({
+          username: data.username,
+          email: data.email,
+        });
+      });
+  }
+
+  logout() {
+    this.auth.logout();
   }
 }

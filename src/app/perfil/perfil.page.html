@@ -11,26 +11,28 @@
 
         <main class="main">
             <div class="profile-img">
-                <img src="../../assets/img/silva.jpg">
-                <img (click)="takePicture()" class="chance-profile" src="../../assets/img/trocar.png" alt="">
-                <p>{{photo}}</p>
+
+                 <ngx-avatar *ngIf="dataUser?.username" bgColor="#ff9000"  name="{{dataUser?.username}}" size="77" [round]="true">
+          </ngx-avatar>
+          <!--       <img (click)="takePicture()" class="chance-profile" src="../../assets/img/trocar.png" alt="">
+                <p>{{photo}}</p> -->
             </div>
 
 
             <div class="form">
-                <form>
+                <form [formGroup]="register">
                     <div class="forms-control">
                         <span><img src="../../../assets/icon/user.png" alt=""></span>
-                        <input  type="text" placeholder="Nome" value="Tom Guinamau">
+                        <input  type="text" placeholder="Nome" formControlName="username">
                     </div>
                     <div class="forms-control">
                         <span><img src="../../../assets/icon/email.png" alt=""></span>
-                        <input type="email" placeholder="E-mail" value="tomguinamau@gmail.com">
+                        <input type="email" placeholder="E-mail" formControlName="email">
                     </div>
                     <div class="forms-row">
                         <div class="forms-control">
                             <span><img src="../../../assets/icon/senha.png" alt=""></span>
-                            <input  type="password" placeholder="Senha atual">
+                            <input  type="password" placeholder="Senha atual" formControlName="password">
                         </div>
                         <div class="forms-control">
                             <span><img src="../../../assets/icon/senha.png" alt=""></span>
@@ -41,7 +43,7 @@
                             <input  type="password" placeholder="Confirmar senha">
                         </div>
                         <div  class="forms-control">
-                            <button disabled >Confirmar mudanças</button>
+                            <button [disabled]="register.invalid" >Confirmar mudanças</button>
                         </div>
                     </div>
                 </form>

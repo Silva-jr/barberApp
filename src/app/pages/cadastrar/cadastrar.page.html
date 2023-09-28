@@ -15,21 +15,24 @@
 
         <div class="form">
             <h2>Crie sua conta</h2>
-            <form>
+            <form [formGroup]="register" (ngSubmit)="createUser()">
                 <div class="forms-control">
                     <span><img src="../../../assets/icon/user.png" alt=""></span>
-                    <input type="text" placeholder="Nome">
+                    <input type="text" placeholder="Nome" formControlName="username">
                 </div>
                 <div class="forms-control">
                     <span><img src="../../../assets/icon/email.png" alt=""></span>
-                    <input type="email" placeholder="E-mail">
+                    <input type="email" placeholder="E-mail" formControlName="email">
                 </div>
                 <div class="forms-control">
                     <span><img src="../../../assets/icon/senha.png" alt=""></span>
-                    <input type="password" placeholder="Senha">
+                    <input type="password" placeholder="Senha" formControlName="password">
                 </div>
                 <div class="forms-control">
-                    <button [routerLink]="['../cadastro-concluido']">Cadastrar</button>
+                    <button *ngIf="!loading" type="submit" [disabled]="register.invalid">Cadastrar</button>
+                    <button *ngIf="loading" class="continuar" [disabled]="true" type="submit">
+                        <ion-spinner></ion-spinner>
+                    </button>
                 </div>
             </form>
         </div>

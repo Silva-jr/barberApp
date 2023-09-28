@@ -74,6 +74,9 @@ ion-content {
           font-weight: 500;
           margin-top: 1rem;
           font-size: 14px;
+          &:disabled{
+            background: #fcb963;
+          }
         }
       }
     }

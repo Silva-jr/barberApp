@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
     <ion-toolbar color="tertiary">
         <div class="header">
-            <span [routerLink]="['../../home/home']" class="arrow">
+            <span [routerLink]="['../../home']" class="arrow">
                 <img src="../../../assets/icon/voltar.png" alt="">
             </span>
             <span class="profile-text">
@@ -16,8 +16,8 @@
 <ion-content>
     <div class="container">
 
-        <div class="barber-scroll">
-            <div class="barbers active">
+        <!--         <div class="barber-scroll">
+            <div class="barbers">
                 <img src="../../../assets/img/barbeiro.png" alt="">
                 <span>Francisco André</span>
             </div>
@@ -35,12 +35,13 @@
             </div>
 
 
-        </div>
+        </div> -->
 
         <h3>Escolha a data</h3>
 
         <div class="container-calendar">
-            <ion-datetime [(ngModel)]="myDate" (ionChange)="onChange(myDate)" size="cover" locale="pt-BR" color="light" [presentation]="selectedMode">
+            <ion-datetime [(ngModel)]="myDate" (ionChange)="onChangeDate(myDate)" size="cover" locale="pt-BR"
+                color="light" [presentation]="selectedMode">
             </ion-datetime>
         </div>
 
@@ -50,26 +51,27 @@
 
             <p>Manhã</p>
             <div class="time">
-                <span class="time-hour">09:00</span>
-                <span class="time-hour">10:30</span>
-                <span class="time-hour">12:00</span>
+                <span *ngFor="let item of timeSlots">
+                    <span [ngClass]="{'clock-ative': start===item.start}" (click)="onChange(item.start)"
+                        class="time-hour" *ngIf="item.start<='12:00'">{{item.start}}</span>
+                </span>
             </div>
 
             <p>Tarde</p>
             <div class="time">
-                <span >12:00</span>
-                <span id="hour" data-hours="13:30" class="time-hour">13:30</span>
-                <span id="hour" data-hours="14:00" class="time-hour">14:00</span>
-                <span class="time-hour">15:00</span>
-                <span class="time-hour">17:30</span>
+                <span *ngFor="let item of timeAfternon">
+                    <span [ngClass]="{'clock-ative': start===item.start}" (click)="onChange(item.start)"
+                        class="time-hour">{{item.start}}</span>
+                </span>
             </div>
 
-            <p>Noite</p>
-            <div class="time">
-                <span class="time-hour">19:00</span>
-                <span class="time-hour">19:30</span>
+            <p *ngIf="timeNight==[]">Noite</p>
+            <div class="time" *ngIf="timeNight==[]">
+                <span *ngFor="let item of timeNight "><span class="time-hour">{{item.start}}</span></span>
             </div>
         </div>
-        <button [routerLink]="['../agendamento-concluido']">Agendar</button>
+        <button (click)="createSchedule()">Agendar</button>
     </div>
 </ion-content>
+
+<!-- [routerLink]="['../agendamento-concluido']" -->

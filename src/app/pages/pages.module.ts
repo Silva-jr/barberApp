@@ -7,6 +7,7 @@ import { LoginPage } from './login/login.page';
 import { PagesRoute } from './pages.routing';
 import { CadastrarPage } from './cadastrar/cadastrar.page';
 import { CadastroConcluidoPage } from './cadastro-concluido/cadastro-concluido.page';
+import { AuthService } from '../configs/services/auth.service';
 
 @NgModule({
   declarations: [LoginPage, CadastrarPage, CadastroConcluidoPage],

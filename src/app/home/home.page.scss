@@ -7,11 +7,15 @@ ion-header {
     justify-content: space-between;
     padding: 1rem;
     .profile-text {
-      h6 {
+      p {
         color: #999591;
-      }
-      h4 {
-        color: #ff9000;
+        font-size: 1.25rem;
+        margin: 0;
+        line-height: 1.75rem;
+        font-family: Roboto Slab;
+        &:last-child{
+          color: #ff9000;
+        }
       }
     }
     .profile-img {
@@ -25,7 +29,10 @@ ion-header {
 }
 
 ion-content {
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab";
+  .title{
+    font-size: 1.5625rem;
+  }
   .container {
     position: absolute;
     width: 100%;
@@ -34,14 +41,14 @@ ion-content {
     padding: 1rem;
 
     .profile-card {
-      width: 100%;
+      width: 100%;      
       background: #3e3b47;
-      border-radius: 1rem;
+      border-radius: 10px;
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 1.5rem;
-      padding: 0 1rem;
+      padding: 1rem;
       margin-top: 1rem;
       cursor: pointer;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -49,15 +56,26 @@ ion-content {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
       }
       &-img {
-        width: 12rem;
+        
         img {
           border-radius: 50%;          
-          object-fit: cover;          
+          object-fit: cover no-repeat;          
+          width: 6rem;          
         }
       }
       &-detail {
         width: 100%;
-        padding: 0%;
+        height: 7rem;
+        margin-left: 2px;
+        padding-top: 8px;
+        .name{
+        font-size: 1.125rem;
+        font-family: Roboto Slab;
+        color: var(--gray, #F4EDE8);
+        font-weight: 500;
+        margin: 0%;
+      }
+
         .date-time {
           display: flex;
           align-items: center;

@@ -6,7 +6,7 @@ import { CadastroConcluidoPage } from './pages/cadastro-concluido/cadastro-concl
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'pages/login',
+    redirectTo: 'home/home',
     pathMatch: 'full',
   },
   {
