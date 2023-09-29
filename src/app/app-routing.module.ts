@@ -6,35 +6,8 @@ import { CadastroConcluidoPage } from './pages/cadastro-concluido/cadastro-concl
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home/home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'home',
     loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
-  },
-  {
-    path: 'shared',
-    loadChildren: () =>
-      import('./shared/shared.module').then((m) => m.SharedModule),
-  },
-  {
-    path: 'pages',
-    loadChildren: () =>
-      import('./pages/pages.module').then((m) => m.PagesModule),
-  },
-  {
-    path: 'cadastro-concluido',
-    component: CadastroConcluidoPage,
-  },
-  {
-    path: 'perfil',
-    component: PerfilPage,
-  },
-  {
-    path: 'agendado',
-    loadChildren: () => import('./agendado/agendado.module').then( m => m.AgendadoPageModule)
+      import('./tabs/tabs.module').then((m) => m.TabsPageModule),
   },
 ];
 
