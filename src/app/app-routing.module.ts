@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'perfil',
     component: PerfilPage,
   },
+  {
+    path: 'agendado',
+    loadChildren: () => import('./agendado/agendado.module').then( m => m.AgendadoPageModule)
+  },
 ];
 
 @NgModule({

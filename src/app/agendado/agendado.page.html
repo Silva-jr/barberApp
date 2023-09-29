@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <div class="header">
+      <span [routerLink]="['../home']" class="arrow">
+        <img src="../../assets/icon/voltar.png" alt="" />
+      </span>
+      <span class="profile-text"> Marcações </span>
+      <div class="profile-img">
+        <img src="../../assets/img/silva.jpg" alt="" />
+      </div>
+    </div>
+  </ion-toolbar>
+  <div class="menu">
+    <ion-segment mode="md" (ionChange)="segmentChanged($event)" value="list1">
+      <ion-segment-button value="list1">
+        <ion-label> Agendadas </ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="list2">
+        <ion-label> Passadas </ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+
+
+    <div  *ngIf="segment === 'list1'" class="card-market">
+
+      <div class="card-market-items">
+          <p class="date">25 Agosto de 2023</p>
+          <p>Corte de Cabelo</p>
+          <p>Hora: 14:30</p>
+          <p>Barbeiro: Sebastião Paulo</p>
+      </div>
+      <div class="card-market-items">
+        <p class="date">25 Agosto de 2023</p>
+        <p>Corte de Cabelo</p>
+        <p>Hora: 14:30</p>
+        <p>Barbeiro: Sebastião Paulo</p>
+    </div>
+    </div>
+  </div>
+</ion-content>

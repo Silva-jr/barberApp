@@ -1,0 +1,85 @@
+ion-header {
+  font-family: "Roboto Slab", serif;
+  .header {
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    .profile-text {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .profile-img {
+      img {
+        border-radius: 4rem;
+        width: 40px;
+      }
+    }
+  }
+  .menu{
+    background: #312e38 !important;
+  }
+}
+
+ion-content {
+  --background: #312e38;
+  .container {
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 0;
+    font-family: "Mulish", sans-serif;
+
+    .menu {
+      width: 100%;
+      border-bottom: 1px solid #323f4b;
+    }
+
+    .card-market {
+      padding: 2rem 15px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      &-items {
+        width: 100%;
+        border-radius: 10px;
+        background: #3e3b47;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 16px;
+        line-height: 10px;
+        .date {
+          font-weight: 800;
+          font-style: normal;
+          font-size: 14px;
+          color: #fff;
+          text-transform: uppercase;
+        }
+        p {
+          color: #999591;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%; /* 14.4px */
+          letter-spacing: 0.15px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+ion-segment-button {
+  --indicator-color: #ff9000;
+  --border-color: #323f4b;
+  --color-checked: #ff9000;
+  --color: #b1b1b1;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  --background: transparent;
+
+  border-bottom: 1px solid #323f4b;
+}

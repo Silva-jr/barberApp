@@ -13,7 +13,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentModule } from './shared/components.module';
 import { AuthInterceptor } from './configs/security/auth.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AvatarModule } from 'ngx-avatar';
 @NgModule({
   declarations: [AppComponent, PerfilPage],
   imports: [
@@ -24,7 +23,6 @@ import { AvatarModule } from 'ngx-avatar';
     ComponentModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    AvatarModule
   ],
   providers: [
     Camera,
